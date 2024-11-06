@@ -284,7 +284,7 @@ const SplashedPushNotifications: React.FC = () => {
 
         {/* Credit Section */}
         <div style={{ color: 'white', textAlign: 'center', marginTop: '40px' }}>
-            The existence of this project wouldn't have been possible without the following contributions:
+            The existence of this project wouldn't have been possible without the following:
             <br />
             <a href="https://codepen.io/josetxu/pen/OJGXdzY" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>
                 Splashed Toast Notifications - CSS
