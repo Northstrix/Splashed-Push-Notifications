@@ -14,12 +14,12 @@ https://codepen.io/Northstrix/pen/XWvBoxE
 
 The existence of this project wouldn't've been possible without the following:
 
-[Splashed Toast Notifications - CSS](https://codepen.io/josetxu/pen/OJGXdzY) by [Josetxu](https://codepen.io/josetxu/pen/OJGXdzY)
+<a href="https://codepen.io/josetxu/pen/OJGXdzY" target="_blank">Splashed Toast Notifications - CSS</a> by <a href="https://codepen.io/josetxu/pen/OJGXdzY" target="_blank">Josetxu</a>
 
-[Push Notifications](https://codepen.io/FlorinPop17/pen/xxORmaB) by [Florin Pop](https://codepen.io/FlorinPop17)
+<a href="https://codepen.io/FlorinPop17/pen/xxORmaB" target="_blank">Push Notifications</a> by <a href="https://codepen.io/FlorinPop17" target="_blank">Florin Pop</a>
 
-[Perplexity AI](https://www.perplexity.ai/)
+<a href="https://www.perplexity.ai/" target="_blank">Perplexity AI</a>
 
 ## Source Code
 
-You can download the source code from https://github.com/Northstrix/Splashed-Push-Notifications
+You can download the source code from <a href="https://sourceforge.net/projects/splashed-push-notifications/" target="_blank">SourceForge</a> and <a href="https://github.com/Northstrix/Splashed-Push-Notifications" target="_blank">GitHub</a>
