@@ -2,7 +2,7 @@
 
 Simple, splashed push notifications created from templates I found on CodePen.
 
-Test them out at https://northstrix.github.io/Splashed-Push-Notifications/
+Check them out at https://northstrix.github.io/Splashed-Push-Notifications/
 
 Alternatively, you can play with the notifications on Codepen:
 
