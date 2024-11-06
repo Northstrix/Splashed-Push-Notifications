@@ -141,57 +141,57 @@ const SplashedPushNotifications: React.FC = () => {
         notif.appendChild(timerContainer);
 
         // Create timer divs
-        const timerLeftRtl = document.createElement('div');
-        timerLeftRtl.classList.add(styles.timerLeft);
-        
-        const timerRightRtl = document.createElement('div');
-        timerRightRtl.classList.add(styles.timerRight);
+        const timerLeft = document.createElement('div');
+        timerLeft.classList.add(styles.timerLeft);
+
+        const timerRight = document.createElement('div');
+        timerRight.classList.add(styles.timerRight);
 
         // Append timer halves in swapped order
-        timerContainer.appendChild(timerRightRtl);
-        timerContainer.appendChild(timerLeftRtl);
+        timerContainer.appendChild(timerRight);
+        timerContainer.appendChild(timerLeft);
 
         // Append notification to container
         rtlNotificationContainerRef.current.appendChild(notif);
 
         // Trigger animations for appearance
         notif.style.animation = 'slideInWithBounce 0.6s ease forwards';
-
-        const durationRtl = 5000; // Set duration to 5 seconds
+        
+        const duration = 5000; // Set duration to 5 seconds
 
         // Generate a unique ID for this notification (only once)
-        const uniqueIdRtl = Date.now();
+        const uniqueId = Date.now();
 
         // Set initial animation for both sides of the timer with uniqueId
-        setTimerAnimation(timerLeftRtl, timerRightRtl, durationRtl, uniqueIdRtl);
+        setTimerAnimation(timerLeft, timerRight, duration, uniqueId);
 
-        let timeoutIdRtl: NodeJS.Timeout;
-        
         // Set timeout to remove notification after duration
-        timeoutIdRtl = setTimeout(() => removeNotification(notif), durationRtl);
-
-        let remainingTime = durationRtl; // Track remaining time
+        let timeoutId: NodeJS.Timeout;
+        
+        timeoutId = setTimeout(() => removeNotification(notif), duration);
+        
+        let remainingTime = duration; // Track remaining time
 
         // Pause timer on hover and store remaining time
         notif.addEventListener("mouseenter", () => {
-            clearTimeout(timeoutIdRtl); // Stop the timeout
-
-            const computedWidth = parseFloat(getComputedStyle(timerLeftRtl).width);
+            clearTimeout(timeoutId);  // Stop the timeout
+            
+            const computedWidth = parseFloat(getComputedStyle(timerLeft).width);
             const totalWidth = parseFloat(getComputedStyle(timerContainer).width);
-            const elapsedTime = (computedWidth / totalWidth) * durationRtl; // Calculate elapsed time
-
-            remainingTime = durationRtl - elapsedTime; // Calculate remaining time
-            (timerLeftRtl as HTMLElement).style.animationPlayState = "paused";
-            (timerRightRtl as HTMLElement).style.animationPlayState = "paused";
+            const elapsedTime = (computedWidth / totalWidth) * duration; // Calculate elapsed time
+            
+            remainingTime = duration - elapsedTime; // Calculate remaining time
+            (timerLeft as HTMLElement).style.animationPlayState = "paused";
+            (timerRight as HTMLElement).style.animationPlayState = "paused";
         });
 
         // Resume timer on mouse leave with restored remaining time
         notif.addEventListener("mouseleave", () => {
             if (remainingTime > 0) {
-                setTimerAnimation(timerLeftRtl, timerRightRtl, durationRtl, uniqueIdRtl);
-                timeoutIdRtl = setTimeout(() => removeNotification(notif), remainingTime);
-                (timerLeftRtl as HTMLElement).style.animationPlayState = "running";
-                (timerRightRtl as HTMLElement).style.animationPlayState = "running";
+                setTimerAnimation(timerLeft, timerRight, duration, uniqueId);
+                timeoutId = setTimeout(() => removeNotification(notif), duration - remainingTime);
+                (timerLeft as HTMLElement).style.animationPlayState = "running";
+                (timerRight as HTMLElement).style.animationPlayState = "running";
             }
         });
     }
@@ -284,17 +284,27 @@ const SplashedPushNotifications: React.FC = () => {
 
         {/* Credit Section */}
         <div style={{ color: 'white', textAlign: 'center', marginTop: '40px' }}>
-            The existence of this project wouldn't've been possible without the following:
+            The existence of this project wouldn't have been possible without the following contributions:
             <br />
-            <a href="https://codepen.io/josetxu/pen/OJGXdzY" style={{ textDecoration: 'underline', color: 'white' }}>https://codepen.io/josetxu/pen/OJGXdzY</a><br />
-            <a href="https://codepen.io/FlorinPop17/pen/xxORmaB" style={{ textDecoration: 'underline', color: 'white' }}>https://codepen.io/FlorinPop17/pen/xxORmaB</a><br />
-            <a href="https://www.perplexity.ai/" style={{ textDecoration: 'underline', color: 'white' }}>https://www.perplexity.ai/</a><br />
+            <a href="https://codepen.io/josetxu/pen/OJGXdzY" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>
+                Splashed Toast Notifications - CSS
+            </a> by <a href="https://codepen.io/josetxu" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>Josetxu</a>
+            <br />
+            <a href="https://codepen.io/FlorinPop17/pen/xxORmaB" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>
+                Push Notifications
+            </a> by <a href="https://codepen.io/FlorinPop17" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>Florin Pop</a>
+            <br />
+            <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>
+                Perplexity AI
+            </a>
         </div>
 
         {/* GitHub Source Code Link */}
         <div style={{ color: 'white', textAlign: 'center', marginTop: '30px' }}>
-            The source code is available on 
-            <a href="https://github.com/Northstrix/Splashed-Push-Notifications" style={{ textDecoration: 'underline', color: 'white' }}> GitHub</a>.
+            <a>The source code is available on </a>
+            <a href="https://sourceforge.net/projects/splashed-push-notifications/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}>SourceForge</a>
+            <a> and </a>
+            <a href="https://github.com/Northstrix/Splashed-Push-Notifications" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'white' }}> GitHub</a>.
         </div>
     </div>
 );
