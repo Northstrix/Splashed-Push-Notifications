@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Splashed-Push-Notifications/static/css/main.40995722.css",
-    "main.js": "/Splashed-Push-Notifications/static/js/main.97831acd.js",
+    "main.js": "/Splashed-Push-Notifications/static/js/main.0a35bdb6.js",
     "index.html": "/Splashed-Push-Notifications/index.html",
     "main.40995722.css.map": "/Splashed-Push-Notifications/static/css/main.40995722.css.map",
-    "main.97831acd.js.map": "/Splashed-Push-Notifications/static/js/main.97831acd.js.map"
+    "main.0a35bdb6.js.map": "/Splashed-Push-Notifications/static/js/main.0a35bdb6.js.map"
   },
   "entrypoints": [
     "static/css/main.40995722.css",
-    "static/js/main.97831acd.js"
+    "static/js/main.0a35bdb6.js"
   ]
 }
