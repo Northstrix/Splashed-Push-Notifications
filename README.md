@@ -4,6 +4,8 @@ Simple, splashed push notifications created from templates I found on CodePen.
 
 Check them out at https://northstrix.github.io/Splashed-Push-Notifications/
 
+An improved version of this component is available at https://21st.dev/Northstrix/splashed-push-notifications/default
+
 Alternatively, you can play with the notifications on Codepen:
 
 https://codepen.io/Northstrix/pen/eYqjbvW
